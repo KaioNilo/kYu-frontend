@@ -1,4 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --font-sans: "Cascadia Code", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Moningue", serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    @apply bg-[#121212] text-[#F2F9FF] antialiased tracking-wide; 
+  }
+
+  h1, h2 {
+    font-family: var(--font-display);
+    @apply font-normal tracking-wider uppercase;
+  }
+  
+  button, input, textarea, select {
+    @apply tracking-wide;
+  }
+}

@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import { MultiStepForm } from './components/MultiStepForm';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h2>Hello world</h2>
-      </div>
-      
-    </>
-  )
+    <div className="min-h-screen w-full bg-[#121212] flex items-center justify-center p-4">
+      <main className="w-full max-w-lg flex justify-center">
+        <MultiStepForm />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;

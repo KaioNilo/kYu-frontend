@@ -1,5 +1,5 @@
 import api from './api';
-import type { OrderFormData } from '../types/order';
+import { type OrderFormData } from '../types/order';
 
 // Interface de resposta do backend
 export interface OrderResponse {
