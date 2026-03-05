@@ -66,22 +66,25 @@ export const MultiStepForm = () => {
   }
 
   return (
-    <div className="bg-[#202020] p-8 rounded-[32px] w-full max-w-md border border-[#F2F9FF]/10 shadow-2xl">
+    <div className="bg-[#202020] p-8 rounded-2xl w-full max-w-md border border-[#F2F9FF]/10 shadow-2xl">
+
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         
         {/* STEP 1: DADOS DO CLIENTE */}
         {step === 1 && (
           <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4">
-            <input {...register("customer.name")} placeholder="DIGITE SEU NOME" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#636363] outline-none focus:ring-2 ring-[#2322E3]" />
-            <input {...register("customer.email")} placeholder="DIGITE SEU E-MAIL" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#636363] outline-none focus:ring-2 ring-[#2322E3]" />
-            <input {...register("customer.phone")} placeholder="DIGITE SEU TELEFONE" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#636363] outline-none focus:ring-2 ring-[#2322E3]" />
+            <input {...register("customer.name")} placeholder="DIGITE SEU NOME" className="bg-[#F2F9FF] p-5 mb-3 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
             
-            <label className="flex items-center gap-3 text-[10px] text-[#F2F9FF]/60 font-bold cursor-pointer group">
-              <input type="checkbox" {...register("lgpd.termsConsent")} className="w-5 h-5 rounded-full border-2 border-[#1DEA4C] appearance-none checked:bg-[#1DEA4C] transition-all cursor-pointer" />
-              <span>LI E CONCORDO COM OS <span className="underline text-[#F2F9FF]">TERMOS DE USO</span>.</span>
+            <input {...register("customer.email")} placeholder="SEU_EMAIL@EMAIL.COM" className="bg-[#F2F9FF] p-5 mb-3 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
+            
+            <input {...register("customer.phone")} placeholder="(00) 00000-0000" className="bg-[#F2F9FF] p-5 mb-3 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
+            
+            <label className="flex items-center gap-3 text-[10px] text-[#C7CACC] font-bold cursor-pointer group">
+              <input type="checkbox" {...register("lgpd.termsConsent")} className="w-5 h-5 my-2 rounded-full border-2 border-[#1DEA4C] appearance-none checked:bg-[#1DEA4C] transition-all cursor-pointer" />
+              <span>LI E CONCORDO COM OS <span className="underline text-[#F2F9FF]">TERMOS DE USO</span> E A <span className="underline text-[#F2F9FF]">POLÍTICA DE PRIVACIDADE</span>.</span>
             </label>
             
-            <button type="button" onClick={() => setStep(2)} className="border-2 border-[#1DEA4C] text-[#F2F9FF] p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">
+            <button type="button" onClick={() => setStep(2)} className="border-2 border-[#1DEA4C] text-[#F2F9FF] mt-2 p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">
               Avançar <ChevronRight size={20} />
             </button>
           </div>
@@ -95,7 +98,7 @@ export const MultiStepForm = () => {
                 const [n, p] = e.target.value.split('|');
                 if(n) addService(n, Number(p));
               }}
-              className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold outline-none cursor-pointer"
+              className="bg-[#F2F9FF] p-5 rounded-2xl text-[#9A67FF] font-bold outline-none cursor-pointer"
             >
               <option value="">ESCOLHA O(S) SERVIÇO(S)</option>
               <option value="Landing Page|500">Landing Page</option>
@@ -104,8 +107,8 @@ export const MultiStepForm = () => {
             </select>
             
             <div className="space-y-3 max-h-52 overflow-y-auto pr-2">
-               {fields.map((field, index) => (
-                 <div key={field.id} className="border border-[#F2F9FF]/10 p-4 rounded-2xl flex justify-between items-center bg-[#F2F9FF]/5">
+              {fields.map((field, index) => (
+                <div key={field.id} className="border border-[#F2F9FF]/10 p-4 rounded-2xl flex justify-between items-center bg-[#F2F9FF]/5">
                     <div className="flex flex-col">
                       <span className="text-[#F2F9FF] text-xs font-black uppercase">{field.description}</span>
                       <span className="text-[#636363] text-[10px] font-bold">UN: R$ {field.price.toFixed(2)}</span>
@@ -115,8 +118,8 @@ export const MultiStepForm = () => {
                       <span className="font-bold text-sm">{field.quantity}</span>
                       <button type="button" onClick={() => update(index, {...field, quantity: field.quantity + 1})} className="hover:text-[#1DEA4C]"><Plus size={14}/></button>
                     </div>
-                 </div>
-               ))}
+                </div>
+              ))}
             </div>
 
             <div className="text-right border-t border-[#F2F9FF]/10 pt-2">
@@ -136,11 +139,11 @@ export const MultiStepForm = () => {
             <textarea 
               {...register("notes")} 
               placeholder="ADICIONE OBSERVAÇÕES..." 
-              className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold h-40 resize-none outline-none focus:ring-2 ring-[#2322E3]" 
+              className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] placeholder:text-[#9A67FF] font-bold h-40 resize-none outline-none focus:ring-2 ring-[#2322E3]" 
             />
-            <p className="text-[#1DEA4C] text-[10px] text-center font-black uppercase">
-              Clique em solicitar para oficializar o pedido.
-            </p>
+            <h3 className="text-[#1DEA4C] text-[15px] text-center font-black uppercase my-2">
+              Clique em solicitar para oficializar o pedido do(s) serviço(s).
+            </h3>
             <div className="flex gap-3">
               <button 
                 type="button" 
@@ -172,6 +175,7 @@ export const MultiStepForm = () => {
           ))}
         </div>
       </form>
+
     </div>
   );
 };

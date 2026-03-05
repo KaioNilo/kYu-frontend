@@ -6,9 +6,13 @@
 }
 
 @layer base {
+  nav a {
+    font-family: var(--font-display) !important;
+  }
+
   body {
     font-family: var(--font-sans);
-    @apply bg-[#121212] text-[#F2F9FF] antialiased tracking-wide; 
+    @apply bg-[#202020] text-[#F2F9FF] antialiased tracking-wide; 
   }
 
   h1, h2 {
