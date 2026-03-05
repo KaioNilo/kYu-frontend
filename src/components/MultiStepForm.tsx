@@ -98,7 +98,7 @@ export const MultiStepForm = () => {
                 const [n, p] = e.target.value.split('|');
                 if(n) addService(n, Number(p));
               }}
-              className="bg-[#F2F9FF] p-5 rounded-2xl text-[#9A67FF] font-bold outline-none cursor-pointer"
+              className="bg-[#F2F9FF] py-5 px-3 rounded-2xl text-[#9A67FF] font-bold outline-none cursor-pointer"
             >
               <option value="">ESCOLHA O(S) SERVIÇO(S)</option>
               <option value="Landing Page|500">Landing Page</option>
@@ -127,7 +127,7 @@ export const MultiStepForm = () => {
             </div>
 
             <div className="flex gap-3">
-              <button type="button" onClick={() => setStep(1)} className="flex-1 border-2 border-[#6261F6] text-[#F2F9FF] p-4 rounded-2xl font-black hover:bg-[#6261F6]/10">VOLTAR</button>
+              <button type="button" onClick={() => setStep(1)} className="flex-1 border-2 border-[#2322E3] text-[#F2F9FF] p-4 rounded-2xl font-black hover:bg-[#2322E3]/20">VOLTAR</button>
               <button type="button" onClick={() => setStep(3)} className="flex-1 border-2 border-[#1DEA4C] text-[#F2F9FF] p-4 rounded-2xl font-black hover:bg-[#1DEA4C] hover:text-[#202020]">AVANÇAR</button>
             </div>
           </div>
@@ -148,7 +148,7 @@ export const MultiStepForm = () => {
               <button 
                 type="button" 
                 onClick={() => setStep(2)} 
-                className="flex-1 border-2 border-[#6261F6] text-[#F2F9FF] p-4 rounded-2xl font-black uppercase hover:bg-[#6261F6]/10 transition-all"
+                className="flex-1 border-2 border-[#2322E3] text-[#F2F9FF] p-4 rounded-2xl font-black uppercase hover:bg-[#2322E3]/20 transition-all"
               >
                 Voltar
               </button>
