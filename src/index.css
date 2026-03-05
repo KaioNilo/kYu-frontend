@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Moningue';
+  src: url('./assets/monigue.otf') format('opentype');
+  font-weight: lighter;
+  font-style: light;
+  letter-spacing: 2px;
+}
+
 @theme {
   --font-sans: "Cascadia Code", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Moningue", serif;
 }
 
 @layer base {
-  nav a {
+  h1, h2 {
     font-family: var(--font-display) !important;
+    letter-spacing: 3px;
   }
 
   body {
     font-family: var(--font-sans);
     @apply bg-[#202020] text-[#F2F9FF] antialiased tracking-wide; 
-  }
-
-  h1, h2 {
-    font-family: var(--font-display);
-    @apply font-normal tracking-wider uppercase;
   }
   
   button, input, textarea, select {

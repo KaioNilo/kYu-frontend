@@ -11,8 +11,7 @@ export const Header = () => {
           <a 
             key={item} 
             href={`#${item.toLowerCase().replace(' ', '-')}`}
-            className="font-display text-[#2322E3] font-bold text-lg hover:text-[#1CB940] transition-colors tracking-widest"
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="text-[#2322E3] text-lg hover:text-[#1CB940] font-bold transition-colors tracking-widest"
           >
             {item}
           </a>
