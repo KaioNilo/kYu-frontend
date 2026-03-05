@@ -66,8 +66,8 @@ export const MultiStepForm = () => {
   }
 
   return (
-    <div className="bg-[#202020] p-8 rounded-2xl w-full max-w-md border border-[#F2F9FF]/10 shadow-2xl">
-
+    <div className="bg-[#202020] p-8 rounded-2xl border border-[#F2F9FF]/10 shadow-2xl flex items-center justify-center overflow-hidden" style={{ width: '448px', height: '512px' }}>
+    
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         
         {/* STEP 1: DADOS DO CLIENTE */}
@@ -98,7 +98,7 @@ export const MultiStepForm = () => {
                 const [n, p] = e.target.value.split('|');
                 if(n) addService(n, Number(p));
               }}
-              className="bg-[#F2F9FF] py-5 px-3 rounded-2xl text-[#9A67FF] font-bold outline-none cursor-pointer"
+              className="bg-[#F2F9FF] py-5 px-3 w-[382px] rounded-2xl text-[#9A67FF] font-bold outline-none cursor-pointer"
             >
               <option value="">ESCOLHA O(S) SERVIÇO(S)</option>
               <option value="Landing Page|500">Landing Page</option>
