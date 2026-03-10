@@ -3,7 +3,7 @@ import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { createOrderSchema, type OrderFormData } from '../types/order'; 
 import { submitOrder } from '../services/orderService';
-import { CheckCircle2, ChevronRight, ChevronLeft, Send, Plus, Minus, ChevronDown} from 'lucide-react';
+import { ChevronRight, ChevronLeft, Send, Plus, Minus, ChevronDown} from 'lucide-react';
 
 export const MultiStepForm = () => {
   const [step, setStep] = useState(1);
@@ -20,7 +20,7 @@ export const MultiStepForm = () => {
     }
   });
 
-  const { fields, append, update } = useFieldArray({
+  const { fields, append, update, remove } = useFieldArray({
     control,
     name: "services"
   });
@@ -55,13 +55,12 @@ export const MultiStepForm = () => {
 
   if (isSuccess) {
     return (
-      <div className="bg-[#1DEA4C] p-10 rounded-[40px] text-center text-[#202020] flex flex-col items-center gap-6 max-w-sm mx-auto shadow-2xl animate-in zoom-in">
-        <CheckCircle2 size={80} strokeWidth={1.5} />
-        <div className="space-y-2">
-          <h2 className="text-2xl font-black uppercase tracking-tighter">Pedido Realizado!</h2>
-          <p className="text-sm font-bold">Em breve, entraremos em contato por e-mail.</p>
+      <div className="bg-[#1DEA4C] p-10 rounded-[40px] text-center text-[#202020] flex flex-col items-center gap-5 w-[382px] mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat flex flex-col justify-center" style={{ width: '448px', height: '448px', backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}>
+        <div>
+          <h2 className="text-3xl font-black uppercase tracking-wider">Pedido Realizado!</h2>
+          <p className="text-lg mx-5 font-bold">Em breve, entraremos em contato por e-mail.</p>
+          <button onClick={() => window.location.reload()} className="mt-2 border-2 border-[#202020] hover:bg-[#202020] hover:text-[#F2F9FF] transition-all px-8 py-2 rounded-full font-bold uppercase">Fechar</button>
         </div>
-        <button onClick={() => window.location.reload()} className="mt-4 border-2 border-[#202020] hover:bg-[#202020] hover:text-[#F2F9FF] transition-all px-8 py-2 rounded-full font-bold uppercase">Fechar</button>
       </div>
     );
   }
@@ -131,9 +130,25 @@ export const MultiStepForm = () => {
                       <span className="text-[#636363] text-[10px] font-bold">UN: R$ {field.price.toFixed(2)}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <button type="button" onClick={() => update(index, {...field, quantity: Math.max(1, field.quantity - 1)})} className="text-[#F2F9FF]"><Minus size={14}/></button>
-                      <span className="text-[#F2F9FF] font-bold">{field.quantity}</span>
-                      <button type="button" onClick={() => update(index, {...field, quantity: field.quantity + 1})} className="text-[#F2F9FF]"><Plus size={14}/></button>
+                      <button type="button" onClick={() => {
+                          if (field.quantity > 1) {
+                            update(index, { ...field, quantity: field.quantity - 1 });
+                          } else {
+                            remove(index);
+                          }
+                        }} className="text-[#F2F9FF] hover:text-[#B58FFF] transition-colors p-1">
+                        <Minus size={14}/>
+                      </button>
+                      
+                      <span className="text-[#F2F9FF] font-bold w-4 text-center">{field.quantity}</span>
+                      
+                      <button 
+                        type="button" 
+                        onClick={() => update(index, { ...field, quantity: field.quantity + 1 })} 
+                        className="text-[#F2F9FF] hover:text-[#1DEA4C] transition-colors p-1"
+                      >
+                        <Plus size={14}/>
+                      </button>
                     </div>
                 </div>
               ))}
@@ -155,7 +170,7 @@ export const MultiStepForm = () => {
         {step === 3 && (
           <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] mx-auto">
             <textarea {...register("notes")} placeholder="ADICIONE OBSERVAÇÕES RELEVANTES..." className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold h-40 resize-none outline-none focus:ring-2 ring-[#2322E3]" />
-            <h3 className="text-[#1DEA4C] text-[13px] text-center font-black uppercase">Clique em solicitar para oficializar o pedido. 😊</h3>
+            <h3 className="text-[#1DEA4C] text-[13px] text-center my-3 mx-9 font-black uppercase">Clique em solicitar para oficializar o pedido do serviço. 😊</h3>
             <div className="flex gap-3">
               <button type="button" onClick={() => setStep(2)} className="flex-1 border-2 border-[#2322E3] text-[#F2F9FF] p-4 rounded-2xl font-black uppercase hover:bg-[#2322E3]/20 transition-all">Voltar</button>
               <button type="submit" className="flex-1 border-2 border-[#1DEA4C] text-[#F2F9FF] p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">Solicitar <Send size={18} /></button>
