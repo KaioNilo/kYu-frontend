@@ -71,19 +71,20 @@ export const MultiStepForm = () => {
         
         {/* STEP 1: DADOS DO CLIENTE */}
         {step === 1 && (
-          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] mx-auto">
-            <div className="flex flex-col gap-1">
-              <input {...register("customer.name")} placeholder="DIGITE SEU NOME" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
+          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] h-[512px] mx-auto">
+            
+            <div className="flex flex-col">
+              <input {...register("customer.name")} placeholder="DIGITE SEU NOME" className="bg-[#F2F9FF] p-5 mb-1 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3] " />
               {errors.customer?.name && <span className="text-[#B58FFF] text-[10px] ml-2 uppercase">{errors.customer.name.message}</span>}
             </div>
             
-            <div className="flex flex-col gap-1">
-              <input {...register("customer.email")} placeholder="SEU_EMAIL@EMAIL.COM" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
+            <div className="flex flex-col">
+              <input {...register("customer.email")} placeholder="SEU_EMAIL@EMAIL.COM" className="bg-[#F2F9FF] mb-1 p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
               {errors.customer?.email && <span className="text-[#B58FFF] text-[10px] ml-2 uppercase">{errors.customer.email.message}</span>}
             </div>
             
-            <div className="flex flex-col gap-1">
-              <input {...register("customer.phone")} placeholder="(00) 00000-0000" className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
+            <div className="flex flex-col">
+              <input {...register("customer.phone")} placeholder="(00) 00000-0000" className="bg-[#F2F9FF] p-5 mb-1 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3]" />
               {errors.customer?.phone && <span className="text-[#B58FFF] text-[10px] ml-2 uppercase">{errors.customer.phone.message}</span>}
             </div>
             
@@ -92,10 +93,10 @@ export const MultiStepForm = () => {
                 <input type="checkbox" {...register("lgpd.termsConsent")} className="w-5 h-5 rounded-full border-2 border-[#1DEA4C] appearance-none checked:bg-[#1DEA4C] transition-all cursor-pointer" />
                 <span>LI E CONCORDO COM OS <span className="underline text-[#F2F9FF]">TERMOS</span> E <span className="underline text-[#F2F9FF]">PRIVACIDADE</span>.</span>
               </label>
-              {errors.lgpd?.termsConsent && <span className="text-[#B58FFF] ml-2 text-[10px] uppercase">Aceite os termos para continuar</span>}
+              {errors.lgpd?.termsConsent && <span className="text-[#B58FFF] ml-2 mt-1 text-[10px] uppercase">Aceite os termos para continuar</span>}
             </div>
             
-            <button type="button" onClick={() => handleNextStep(["customer.name", "customer.email", "customer.phone", "lgpd.termsConsent"])} className="border-2 border-[#1DEA4C] text-[#F2F9FF] mt-2 p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">
+            <button type="button" onClick={() => handleNextStep(["customer.name", "customer.email", "customer.phone", "lgpd.termsConsent"])} className="border-2 border-[#1DEA4C] text-[#F2F9FF] mt- p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">
               Avançar <ChevronRight size={20} />
             </button>
           </div>
