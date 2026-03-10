@@ -55,7 +55,7 @@ export const MultiStepForm = () => {
 
   if (isSuccess) {
     return (
-      <div className="bg-[#1DEA4C] p-10 rounded-[40px] text-center text-[#202020] flex flex-col items-center gap-5 w-[382px] mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat flex flex-col justify-center" style={{ width: '448px', height: '448px', backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}>
+      <div className="bg-[#1DEA4C] border-7 p-10 rounded-[20px] text-center text-[#202020] flex flex-col items-center gap-5 mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat flex flex-col justify-center" style={{ width: '448px', height: '448px', backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}>
         <div>
           <h2 className="text-3xl font-black uppercase tracking-wider">Pedido Realizado!</h2>
           <p className="text-lg mx-5 font-bold">Em breve, entraremos em contato por e-mail.</p>

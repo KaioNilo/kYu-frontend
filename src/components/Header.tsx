@@ -49,7 +49,7 @@ export const Header = () => {
 
       {/* Menu Dropdown */}
       {isOpen && (
-        <div ref={menuRef} className="absolute top-full right-6 mt-2 w-48 bg-[#F2F9FF] shadow-xl rounded-[40px] border border-gray-100 py-6 flex flex-col items-center animate-in slide-in-from-top-5 md:hidden">
+        <div ref={menuRef} className="absolute top-full right-6 mt-2 w-48 bg-[#F2F9FF] shadow-xl rounded-[20px] border border-gray-100 py-6 flex flex-col items-center animate-in slide-in-from-top-5 md:hidden">
           {navItems.reverse().map((item, index) => (
             <div key={item} className="w-full flex flex-col items-center">
               <a
