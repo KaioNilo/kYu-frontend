@@ -1,6 +1,7 @@
 import { Header } from '../components/Header';
 import { Form } from '../components/Form';
 import { Footer } from '../components/Footer';
+import { Hero } from '../components/Hero';
 import { Video } from '../components/video';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <main>
 
         <Video/>
+
+        <Hero />
         
         <Form/>
 
