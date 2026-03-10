@@ -3,28 +3,40 @@
 @font-face {
   font-family: 'Moningue';
   src: url('./assets/monigue.otf') format('opentype');
-  font-weight: lighter;
-  font-style: light;
-  letter-spacing: 2px;
+  font-weight: normal; /* Use normal ou o peso real do arquivo */
+  font-style: normal;
 }
 
 @theme {
+  /* Configuração de fontes para Tailwind v4 */
   --font-sans: "Cascadia Code", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Moningue", serif;
+  
+  /* Cores do seu projeto para facilitar o uso no código */
+  --color-brand-blue: #2322E3;
+  --color-brand-green: #1DEA4C;
+  --color-bg-dark: #202020;
+  --color-off-white: #F2F9FF;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   h1, h2 {
     font-family: var(--font-display) !important;
-    letter-spacing: 3px;
+    letter-spacing: 0.1em; /* 3px convertido para unidade relativa para melhor escala */
   }
 
   body {
     font-family: var(--font-sans);
-    @apply bg-[#202020] text-[#F2F9FF] antialiased tracking-wide; 
+    background-color: var(--color-bg-dark);
+    color: var(--color-off-white);
+    @apply antialiased tracking-wide;
   }
   
   button, input, textarea, select {
-    @apply tracking-wide;
+    @apply tracking-wide outline-none;
   }
 }
