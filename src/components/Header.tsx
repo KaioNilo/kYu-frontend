@@ -33,7 +33,7 @@ export const Header = () => {
           <a
             key={item}
             href={`#${item.toLowerCase().replace(' ', '-')}`}
-            className="text-[#2322E3] text-lg font-bold active:text-[#1CB940] hover:scale-110 transition-all duration-300 tracking-widest"
+            className="text-[#2322E3] text-lg font-bold hover:text-[#9A67FF] active:text-[#1CB940] hover:scale-105 transition-all duration-300 tracking-widest"
           >
             {item}
           </a>
@@ -54,7 +54,7 @@ export const Header = () => {
             <div key={item} className="w-full flex flex-col items-center">
               <a
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="py-3 text-[#2322E3] font-black text-sm tracking-widest hover:scale-110 active:text-[#1CB940] transition-transform uppercase"
+                className="py-3 text-[#2322E3] font-black text-sm tracking-widest hover:scale-105 hover:text-[#9A67FF] active:text-[#1CB940] transition-transform uppercase"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
@@ -67,7 +67,7 @@ export const Header = () => {
           <div className="flex flex-col items-center gap-4 mt-2">
 
             {/* Ícone de Email */}
-            <Mail className="text-[#2322E3] cursor-pointer hover:scale-125 active:text-[#1CB940] transition-transform" size={28} />
+            <Mail className="text-[#2322E3] cursor-pointer hover:scale-110 hover:text-[#9A67FF] active:text-[#1CB940] transition-transform" size={28} />
             <div className="w-3/4 h-[1px] bg-gray-300" />
             
             {/* Ícone do WhatsApp */}

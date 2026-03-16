@@ -10,12 +10,12 @@ export const Hero = () => {
     if (displayedText.length < fullText.length) {
       timeout = setTimeout(() => {
         setDisplayedText(fullText.substring(0, displayedText.length + 1));
-      }, 100); // Velocidade de digitação (100ms)
+      }, 150); // Velocidade de digitação (100ms)
     } else {
       // reinicia estado
       timeout = setTimeout(() => {
         setDisplayedText("");
-      }, 1000);
+      }, 2000);
     }
 
     return () => clearTimeout(timeout);
@@ -28,8 +28,8 @@ export const Hero = () => {
         backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773183723/BG_Hero_pova6b.png')" 
       }}
     >
-      <div className="text-center px-6 max-w-4xl z-10 space-y-6">
-        <h3 className="text-[#F2F9FF] md:text-3xl font-black tracking-widest leading-tight min-h-[2.4em] whitespace-pre-line">
+      <div className="text-center px-6 mx-10 max-w-4xl z-10 space-y-6">
+        <h3 className="text-[#F2F9FF] text-2xl font-black tracking-widest leading-tight min-h-[2.4em] whitespace-pre-line">
           {displayedText}
           <span className="animate-pulse border-r-4 border-[#1DEA4C] ml-1"></span>
         </h3>

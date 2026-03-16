@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'Moningue';
   src: url('./assets/monigue.otf') format('opentype');
-  font-weight: normal; /* Use normal ou o peso real do arquivo */
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -12,7 +12,7 @@
   --font-sans: "Cascadia Code", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Moningue", serif;
   
-  /* Cores do seu projeto para facilitar o uso no código */
+  /* Paleta */
   --color-brand-blue: #2322E3;
   --color-brand-green: #1DEA4C;
   --color-bg-dark: #202020;
@@ -26,7 +26,7 @@
 
   h1, h2 {
     font-family: var(--font-display) !important;
-    letter-spacing: 0.1em; /* 3px convertido para unidade relativa para melhor escala */
+    letter-spacing: 0.1em;
   }
 
   body {
