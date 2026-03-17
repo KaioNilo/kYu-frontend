@@ -55,7 +55,7 @@ export const MultiStepForm = () => {
 
   if (isSuccess) {
     return (
-      <div className="bg-[#1DEA4C] border-7 p-10 rounded-[20px] text-center text-[#202020] flex flex-col items-center gap-5 mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat flex flex-col justify-center" style={{ width: '448px', height: '448px', backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}>
+      <div className="bg-[#1DEA4C] border-7 p-10 rounded-[20px] text-center text-[#202020] flex flex-col items-center gap-5 mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}>
         <div>
           <h2 className="text-3xl font-black uppercase tracking-wider">Pedido Realizado!</h2>
           <p className="text-lg mx-5 font-bold">Em breve, entraremos em contato por e-mail.</p>
@@ -66,12 +66,13 @@ export const MultiStepForm = () => {
   }
 
   return (
-    <div className="bg-[#202020] p-8 rounded-2xl border border-[#F2F9FF]/10 shadow-2xl flex items-center justify-center overflow-hidden" style={{ width: '448px', height: '512px' }}>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full flex flex-col justify-between">
+    <div className="bg-[#202020] p-8 rounded-2xl border border-[#F2F9FF]/10 shadow-2xl flex items-center justify-center overflow-hidden" style={{ width: 'auto', height: '512px' }}>
+
+      <form onSubmit={handleSubmit(onSubmit)} className="w-[290px] h-full flex flex-col justify-between md:w-100">
         
         {/* STEP 1: DADOS DO CLIENTE */}
         {step === 1 && (
-          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] h-[512px] mx-auto">
+          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 mx-auto md:w-100">
             
             <div className="flex flex-col">
               <input {...register("customer.name")} placeholder="DIGITE SEU NOME" className="bg-[#F2F9FF] p-5 mb-1 rounded-2xl text-[#202020] font-bold placeholder:text-[#9A67FF] outline-none focus:ring-2 ring-[#2322E3] " />
@@ -104,7 +105,7 @@ export const MultiStepForm = () => {
 
         {/* STEP 2: SERVIÇOS */}
         {step === 2 && (
-          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] mx-auto">
+          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 mx-auto md:w-100 ">
             <div className="relative w-full">
               <select 
                 onChange={(e) => {
@@ -169,9 +170,12 @@ export const MultiStepForm = () => {
 
         {/* STEP 3: OBSERVAÇÕES */}
         {step === 3 && (
-          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 w-[382px] mx-auto">
+          <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-right-4 mx-auto md:w-100">
+
             <textarea {...register("notes")} placeholder="ADICIONE OBSERVAÇÕES RELEVANTES..." className="bg-[#F2F9FF] p-5 rounded-2xl text-[#202020] font-bold h-40 resize-none outline-none focus:ring-2 ring-[#2322E3]" />
-            <h3 className="text-[#1DEA4C] text-[13px] text-center my-3 mx-9 font-black uppercase">Clique em solicitar para oficializar o pedido do serviço. 😊</h3>
+
+            <h3 className="text-[#1DEA4C] text-[13px] text-center my-3 mx-5 font-black uppercase md:mx-12">Clique em solicitar para oficializar o pedido do serviço. 😊</h3>
+            
             <div className="flex gap-3">
               <button type="button" onClick={() => setStep(2)} className="flex-1 border-2 border-[#2322E3] text-[#F2F9FF] p-4 rounded-2xl font-black uppercase hover:bg-[#2322E3]/20 transition-all">Voltar</button>
               <button type="submit" className="flex-1 border-2 border-[#1DEA4C] text-[#F2F9FF] p-4 rounded-2xl font-black flex justify-center items-center gap-2 hover:bg-[#1DEA4C] hover:text-[#202020] transition-all uppercase">Solicitar <Send size={18} /></button>
