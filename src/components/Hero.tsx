@@ -15,7 +15,7 @@ export const Hero = () => {
       // reinicia estado
       timeout = setTimeout(() => {
         setDisplayedText("");
-      }, 2000);
+      }, 3000);
     }
 
     return () => clearTimeout(timeout);
@@ -35,7 +35,7 @@ export const Hero = () => {
         </h3>
 
         <div className="text-center mx-3">
-          <p className="text-[#F2F9FF] mb-5 tracking-widest uppercase md:font-light">
+          <p className="text-[#F2F9FF] mb-5 tracking-widest uppercase font-light lg:text-2xl">
             Transformamos a sua ideia em resultados <br className="hidden md:block" /> 
             concretos e experiências digitais únicas.
           </p>

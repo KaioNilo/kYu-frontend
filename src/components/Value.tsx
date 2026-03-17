@@ -24,10 +24,10 @@ export const Value = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F2F9FF] py-16 px-6 md:py-24 flex flex-col items-center overflow-hidden">
+    <section className="w-full bg-[#F2F9FF] py-16 px-7 md:py-24 flex flex-col items-center overflow-hidden">
       <div className="text-center mb-12 md:mb-16">
-        <h3 className="text-[#202020] font-black uppercase text-2xl mb-2">Te ajudamos com soluções digitais que</h3>
-        <h2 className="text-[#202020] text-5xl uppercase font-display">
+        <h3 className="text-[#202020] font-black uppercase text-1xl mb-2 mx-7 md: text-2xl lg:text-3xl">Te ajudamos com soluções digitais que</h3>
+        <h2 className="text-[#202020] text-1xl uppercase font-display md: text-4xl lg: text-6xl">
           geram resultados concretos
         </h2>
       </div>
