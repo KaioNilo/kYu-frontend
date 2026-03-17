@@ -1,8 +1,9 @@
 import { Header } from '../components/Header';
+import { Video } from '../components/Video';
+import { Hero } from '../components/Hero';
+import { Value } from '../components/Value';
 import { Form } from '../components/Form';
 import { Footer } from '../components/Footer';
-import { Hero } from '../components/Hero';
-import { Video } from '../components/video';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
 
         <Hero />
         
+        <Value/>
+
         <Form/>
 
       </main>
