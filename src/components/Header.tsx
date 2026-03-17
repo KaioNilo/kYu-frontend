@@ -28,7 +28,7 @@ export const Header = () => {
         <img src={logoKyu} alt="Logo K&U" className="h-10 w-auto" />
       </div>
 
-      <nav className="hidden md:flex gap-8">
+      <nav className="hidden md:flex gap-9">
         {navItems.map((item) => (
           <a
             key={item}
