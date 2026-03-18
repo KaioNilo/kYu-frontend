@@ -22,7 +22,7 @@ export const Header = () => {
   const navItems = ['SOBRE MIM', 'PORTFÓLIO', 'SERVIÇOS', 'ORÇAMENTO'];
 
   return (
-    <header className="w-full bg-[#F2F9FF] py-3 px-6 md:px-10 flex justify-between items-center shadow-sm sticky top-0 z-50">
+    <header className="w-full bg-[#F2F9FF] h-15 py-3 px-6 md:px-10 flex justify-between items-center shadow-sm sticky top-0 z-50">
       
       <div className="flex items-center hover:scale-110 transition-transform duration-300 cursor-pointer">
         <img src={logoKyu} alt="Logo K&U" className="h-10 w-auto" />

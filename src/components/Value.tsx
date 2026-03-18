@@ -24,22 +24,22 @@ export const Value = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F2F9FF] py-16 px-7 md:py-24 flex flex-col items-center overflow-hidden bg-cover bg-top bg-no-repeat" style={{backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773752813/BG_Value_npvsge.png')" }}>
-      <div className="text-center mb-12 md:mb-16">
-        <h3 className="text-[#202020] font-black uppercase mb-2 md: text-3xl lg:text-4xl">Te ajudamos com soluções digitais que</h3>
-        <h3 className="text-[#202020] uppercase font-display md: text-3xl lg: text-7xl">
+    <section className="w-full bg-[#F2F9FF] py-16 px-5 md:py-24 flex flex-col items-center overflow-hidden bg-cover bg-top bg-no-repeat" style={{backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773752813/BG_Value_npvsge.png')" }}>
+      <div className="text-center mx-3 mb-12 md:mb-16">
+        <h3 className="text-[#202020] text-2xl font-black uppercase mb-2 md:text-3xl lg:text-4xl">Te ajudamos com soluções digitais que</h3>
+        <h3 className="text-[#202020] text-5xl uppercase font-display lg:text-7xl">
           geram resultados concretos
         </h3>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 w-full max-w-[1000px] md:max-w-7xl justify-between">
+      <div className="flex flex-col md:flex-row gap-10 w-full max-w-[1300px] md:max-w-9xl justify-between">
         {values.map((item, index) => (
           <div 
             key={index} 
-            className="bg-[#202020] rounded-[35px] overflow-hidden flex flex-col w-full md:w-full shadow-2xl transition-all hover:scale-105 duration-300 group"
+            className="bg-[#202020] rounded-[20px] overflow-hidden flex flex-col w-full md:w-full shadow-2xl transition-all hover:scale-105 duration-300 group"
           >
             {/* CARD */}
-            <div className={`relative h-[220px] w-full ${item.color} flex items-center justify-center overflow-hidden`}>
+            <div className={`relative h-[220px] w-full ${item.color} flex items-center justify-center overflow-hidden lg:h-[300px]`}>
               
               {/* Background */}
               <div 
@@ -56,10 +56,10 @@ export const Value = () => {
             </div>
 
             <div className="p-8 flex flex-col gap-4 flex-grow justify-center">
-              <h3 className="text-[#F2F9FF] font-black  md: tracking-[0.2em] leading-tight uppercase">
+              <h3 className="text-[#F2F9FF] text-1xl font-black tracking-[0.2em] leading-tight uppercase xl:text-lg">
                 {item.title}
               </h3>
-              <h4 className="text-[#F2F9FF] font-light md:leading-relaxed tracking-wider">
+              <h4 className="text-[#F2F9FF] font-light leading-relaxed tracking-wider xl:text-md">
                 {item.description}
               </h4>
             </div>
