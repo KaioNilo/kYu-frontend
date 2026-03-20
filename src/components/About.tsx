@@ -1,78 +1,104 @@
 import React from 'react';
-import { Mail, Instagram, Linkedin, Github, Monitor } from 'lucide-react'; 
+// Substituição da Lucide pela Phosphor Icons
+import { 
+  EnvelopeSimple, 
+  WhatsappLogoIcon, 
+  LinkedinLogo, 
+  GithubLogo 
+} from '@phosphor-icons/react'; 
 
 export const About = () => {
 
-    // Lista de habilidades
+  // Lista de habilidades baseada no seu perfil
   const skills = [
-    "TYPESCRIPT", "REACT", "NODE", "GIT",
-    "JAVA", "DJANGO", "PYTHON", "MONGODB",
-    "POSTGRESQL", "FIGMA", "PHOTOSHOP"
+    "TYPESCRIPT", "REACT", "NODE",
+    "JAVA", "PYTHON", "MONGODB",
+    "POSTGRESQL", "WORDPRESS", "FIGMA", 
+    "PHOTOSHOP", "ILLUSTRATOR"
   ];
 
   return (
-    <section className="w-full bg-[#202020] py-16 lg:py-24 text-[#F2F9FF] font-sans">
-      <div className="container mx-auto px-6 lg:px-20 max-w-[1000px]">
+    <section className="w-full bg-[#202020] py-10 lg:py-15 text-[#F2F9FF] font-sans">
+      <div className="container mx-auto px-15 lg:px-30 max-w-[1000px]">
         
-        {/* TÍTULO DA SEÇÃO: Centralizado e em caixa alta */}
-        <h2 className="text-center text-4xl tracking-[0.01em] lg:text-5xl mb-12 lg:mb-16 tracking-tighter uppercase">
+        {/* TÍTULO DA SEÇÃO */}
+        <h2 className="text-center text-4xl tracking-[0.1em] lg:text-5xl mb-7 lg:mb-8 uppercase">
           SOBRE MIM
         </h2>
 
-        {/* GRID PRINCIPAL: Foto à esquerda e Info à direita no Desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 lg:gap-16 items-start">
+        {/* GRID PRINCIPAL */}
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 lg:gap-5 items-start">
           
-          {/* CONTAINER DA FOTO: Com borda verde neon */}
+          {/* FOTO COM BORDA NEON */}
           <div className="relative group mx-auto lg:mx-0">
-            <div className="w-[280px] h-[280px] lg:w-[300px] lg:h-[300px] border-2 border-[#1DEA4C] rounded-[20px] overflow-hidden p-1">
+            <div className="w-[200px] h-[200px] lg:w-[250px] lg:h-[250px] border-2 border-[#1DEA4C] rounded-[10px] overflow-hidden p-1">
               <img 
-                src="https://res.cloudinary.com/dbgkgdeex/image/upload/v1773800420/sua_foto.png" 
+                src="https://res.cloudinary.com/dbgkgdeex/image/upload/v1774017024/Kaio_Nilo_qijhef.jpg" 
                 alt="Kaio Nilo de Freitas Nobre" 
-                className="w-full h-full object-cover rounded-[15px] grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover rounded-[5px] hover:scale-110 transition-all duration-500"
               />
             </div>
           </div>
 
           {/* COLUNA DE TEXTO E REDES SOCIAIS */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 lg:mt-15">
+
             <div className="flex flex-col gap-2">
-              {/* Linha decorativa horizontal */}
-              <div className="w-16 h-[2px] bg-[#1DEA4C] mb-2" />
-              <h3 className="text-2xl lg:text-3xl font-bold leading-tight">
-                Kaio Nilo de <br /> Freitas Nobre
+            
+              {/* Linha Decorativa */}
+              <div className="w-16 h-[3px] bg-[#1DEA4C] mb-2" />
+              <h3 className="text-[18px] font-bold lg:text-2xl">
+                Kaio Nilo de Freitas Nobre
               </h3>
               
-              {/* ÍCONES SOCIAIS: Alinhados horizontalmente */}
-              <div className="flex gap-4 mt-2">
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors"><Mail size={24} /></a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors"><Monitor size={24} /></a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors"><Linkedin size={24} /></a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors"><Github size={24} /></a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors text-xl font-bold">Bē</a>
+              {/* ÍCONES SOCIAIS */}
+              <div className="flex gap-6 my-3 items-center">
+                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+                  <EnvelopeSimple size={32} />
+                </a>
+                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+                  <WhatsappLogoIcon size={32} />
+                </a>
+                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+                  <LinkedinLogo size={32} />
+                </a>
+                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+                  <GithubLogo size={32} />
+                </a>
+                <a href="#" className="hover:text-[#1DEA4C] transition-colors text-[28px] font-bold">
+                  Bē
+                </a>
               </div>
             </div>
 
-            {/* DESCRIÇÃO PROFISSIONAL: Justificada e com espaçamento */}
-            <div className="text-[#F2F9FF]/80 text-sm lg:text-base leading-relaxed flex flex-col gap-4 max-w-[600px]">
-              <p>
-                Sou Designer Sênior, atuante desde 2018, e Desenvolvedor Full Stack Júnior, atuante desde 2024.
-              </p>
-              <p>
-                Trabalho na produção de materiais digitais com foco em usabilidade, design responsivo, performance digital e em conversão.
-              </p>
-            </div>
           </div>
         </div>
 
-        {/* SEÇÃO DE SKILLS: Grid de tags com bordas neon */}
-        <div className="mt-16 lg:mt-20">
-          <h4 className="text-2xl font-black mb-8 uppercase tracking-widest">MINHAS SKILLS:</h4>
+        {/* DESCRIÇÃO PROFISSIONAL */}
+        <div className="text-[#F2F9FF] font-light text-sm mt-5 lg:text-base flex flex-col gap-3 lg:mt-10 lg:mr-15">
+            <p>
+                Com mais de oito anos de experiência como Designer e agora atuando também como Programador, meu foco é entender o que você precisa antes mesmo de começar a criar.
+            </p>
+            <p>
+                Acredito que um bom projeto nasce de muita organização e planejamento, por isso uso métodos que garantem que tudo seja entregue no prazo e com a máxima qualidade.
+            </p>
+            <p>
+                Eu trabalho para resolver as "dores" do seu dia a dia, transformando problemas complicados em soluções simples e fáceis de usar.
+            </p>
+            <p>
+                No final, você terá um produto que não só tem um visual incrível, mas que também funciona perfeitamente para facilitar a sua vida e a dos seus clientes.
+            </p>
+        </div>
+
+        {/* SEÇÃO DE SKILLS */}
+        <div className="my-10">
+          <h4 className="text-2xl font-black mb-5 uppercase tracking-widest">MINHAS SKILLS:</h4>
           
-          <div className="flex flex-wrap gap-3 lg:gap-4">
+          <div className="flex flex-wrap gap-3 lg:gap-5">
             {skills.map((skill, index) => (
               <div 
                 key={index}
-                className="px-4 py-2 border border-[#1DEA4C] rounded-lg text-xs lg:text-sm font-bold tracking-widest hover:bg-[#1DEA4C] hover:text-[#202020] transition-all cursor-default"
+                className="px-4 py-2 border border-[#1DEA4C] rounded-md text-xs lg:text-sm font-bold tracking-widest hover:bg-[#1DEA4C] hover:text-[#202020] transition-all cursor-default"
               >
                 {skill}
               </div>
