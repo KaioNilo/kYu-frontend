@@ -2,26 +2,32 @@ import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const Services = () => {
-
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const services = [
-    { title: "SITES & LANDING PAGES", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773800420/Servi%C3%A7o_1_v6jpf9.png" },
-    { title: "IDENTIDADE VISUAL", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_2.png" },
-    { title: "SISTEMAS WEB", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_3.png" },
-    { title: "UI/UX DESIGN", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_4.png" },
+const services = [
+    { title: "Site & Landing Page", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773963827/Servi%C3%A7o_1_v6jpf9.png" },
+    { title: "Identidade Visual", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_3.png" },
+    { title: "Logomarca", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_4.png" },
+    { title: "Ilustração", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_1.png" },
+    { title: "Posts Estáticos", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_2.png" },
+    { title: "Reels", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_4.png" },
+    { title: "Material Impresso", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_1.png" },
+    { title: "Diagramação", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_2.png" },
+    { title: "Apresentações", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_3.png" },
   ];
 
+  // Sincroniza a paginação com o scroll manual
   const handleScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, offsetWidth } = scrollRef.current;
-      // Cálculo do index baseado na largura visível do container
+      // Ajuste para par de cards
       const index = Math.round(scrollLeft / offsetWidth);
       setActiveIndex(index);
     }
   };
 
+  // Navega para o par de cards específico
   const scrollTo = (index: number) => {
     if (scrollRef.current) {
       const containerWidth = scrollRef.current.offsetWidth;
@@ -34,46 +40,51 @@ export const Services = () => {
   };
 
   return (
-    <section className="w-full bg-[#2322E3] py-16 relative overflow-hidden bg-cover bg-top bg-no-repeat" style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773798998/BG_Servi%C3%A7os_gsilhr.png')" }}
->
+    <section 
+      className="w-full bg-[#2322E3] py-8 lg:py-14 relative overflow-hidden bg-cover bg-top bg-no-repeat"
+      style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773798998/BG_Servi%C3%A7os_gsilhr.png')" }}
+    >
       <div className="container mx-auto px-5 lg:px-20 relative z-10 flex flex-col items-center">
         
-        <div className="w-full flex justify-between items-end mb-10 lg:mb-10 max-w-[1200px]">
+        {/* Cabeçalho */}
+        <div className="w-full flex justify-between items-end mb-5 max-w-[1200px]">
+
           <h2 className="text-[#F2F9FF] text-4xl lg:text-6xl uppercase">SERVIÇOS</h2>
-          <button className="text-[#F2F9FF] text-md font-bold uppercase hover:text-[#1dea4c] hover:scale-110 active:text-[#202020] transition-all lg:text-lg lg:tracking-widest">
+
+          <button className="text-[#F2F9FF] text-[15px] tracking-[0.1em] 
+           uppercase hover:text-[#1dea4c] transition-all active:text-[#202020] mb-3 lg:text-[17px] lg:mb-3">
             VER TUDO
           </button>
+
         </div>
 
-        <div className="relative w-full max-w-[1200px] group">
-          {/* Setas de Navegação */}
+        <div className="relative w-full max-w-[1200px]">
+          {/* Setas */}
           <button 
             onClick={() => scrollTo(activeIndex - 1)}
-            className="absolute -left-16 top-1/2 -translate-y-1/2 text-[#F2F9FF] hover:text-[#1DEA4C] transition-all z-20 hidden active:text-[#202020] lg:flex disabled:opacity-10"
+            className="absolute -left-16 top-1/2 -translate-y-1/2 text-[#F2F9FF] hover:text-[#1DEA4C] z-20 hidden active:text-[#202020] lg:flex disabled:opacity-10"
             disabled={activeIndex === 0}
           >
-            <ChevronLeft size={56} strokeWidth={1} />
+            <ChevronLeft size={64} strokeWidth={1} />
           </button>
 
-          {/* CARDS */}
           <div 
             ref={scrollRef}
             onScroll={handleScroll}
-            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }} // Esconde no IE e Firefox
-            className="flex gap-6 lg:overflow-x-auto snap-x snap-mandatory w-full pb-4 [&::-webkit-scrollbar]:hidden"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-6 lg:gap-10 overflow-x-auto snap-x snap-mandatory w-full [&::-webkit-scrollbar]:hidden"
           >
             {services.map((service, index) => (
               <div 
                 key={index} 
                 className="
-                  min-w-full             /* 1 card mobile */
-                  lg:min-w-[calc(50%-20px)] /* 2 cards desktop */
-                  snap-center bg-[#202020] p-5 lg:rounded-[20px] shadow-1xl flex flex-col gap-3
-                  transition-all duration-300 group cursor-grab active:cursor-grabbing
+                  min-w-full 
+                  lg:min-w-[calc(50%-20px)] 
+                  snap-start bg-[#202020] h-70 p-6 rounded-[15px] flex flex-col gap-5
+                  transition-all duration-300 group cursor-grab active:cursor-grabbing lg:h-90
                 "
               >
-                {/* Mockup Area */}
-                <div className="bg-[#F2F9FF] rounded-[10px] h-[230px] lg:h-[280px] flex items-center justify-center overflow-hidden">
+                <div className="bg-[#F2F9FF] rounded-[10px] h-[210px] lg:h-[320px] flex items-center justify-center overflow-hidden">
                   <img 
                     src={service.mockup} 
                     alt={service.title} 
@@ -81,9 +92,8 @@ export const Services = () => {
                   />
                 </div>
                 
-                {/* Título */}
-                <div className="ml-1 text-center lg:text-left">
-                  <h3 className="text-[#1DEA4C] text-base lg:text-xl tracking-[0.25em] uppercase">
+                <div className="text-center lg:text-left ml-2">
+                  <h3 className="text-[#1DEA4C] text-xl  uppercase leading-tight">
                     {service.title}
                   </h3>
                 </div>
@@ -93,23 +103,22 @@ export const Services = () => {
 
           <button 
             onClick={() => scrollTo(activeIndex + 1)}
-            className="absolute -right-16 top-1/2 -translate-y-1/2 text-[#F2F9FF] hover:text-[#1DEA4C] transition-all z-20 hidden active:text-[#202020] lg:flex disabled:opacity-10"
-            disabled={activeIndex >= services.length - 2}
+            className="absolute -right-16 top-1/2 -translate-y-1/2 text-[#F2F9FF] hover:text-[#1DEA4C] z-20 hidden lg:flex disabled:opacity-10 active:text-[#202020]"
+            disabled={activeIndex >= Math.ceil(services.length / 2) - 1}
           >
-            <ChevronRight size={56} strokeWidth={1} />
+            <ChevronRight size={64} strokeWidth={1} />
           </button>
         </div>
 
-        {/* Paginação Estilizada */}
-        <div className="flex justify-center gap-3 mt-8 lg:mt-8">
-          {services.map((_, i) => (
+        {/* Paginação */}
+        <div className="flex justify-center gap-3 mt-8 lg:mt-12">
+          {Array.from({ length: Math.ceil(services.length / 2) }).map((_, i) => (
             <button
               key={i}
               onClick={() => scrollTo(i)}
               className={`h-2.5 rounded-full transition-all duration-500 ${
-                activeIndex === i ? 'w-10 bg-[#1DEA4C]' : 'w-2.5 bg-[#F2F9FF]/20'
+                activeIndex === i ? 'w-14 bg-[#1DEA4C]' : 'w-2.5 bg-[#F2F9FF]/20'
               }`}
-              aria-label={`Ir para slide ${i + 1}`}
             />
           ))}
         </div>

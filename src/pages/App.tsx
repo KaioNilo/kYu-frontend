@@ -4,6 +4,7 @@ import { Hero } from '../components/Hero';
 import { Value } from '../components/Value';
 import { Form } from '../components/Form';
 import { Services } from '../components/Services';
+import { About } from '../components/About'
 import { Footer } from '../components/Footer';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Form/>
 
         <Services/>
+
+        <About/>
 
         <Hero/>
 
