@@ -18,7 +18,7 @@ export const About = () => {
   ];
 
   return (
-    <section className="w-full bg-[#202020] py-10 lg:py-15 text-[#F2F9FF] font-sans">
+    <section id="about" className="w-full bg-[#202020] py-10 lg:py-15 text-[#F2F9FF] font-sans">
       <div className="container mx-auto px-15 lg:px-30 max-w-[1000px]">
         
         {/* TÍTULO DA SEÇÃO */}

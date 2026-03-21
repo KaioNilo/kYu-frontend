@@ -39,4 +39,8 @@
   button, input, textarea, select {
     @apply tracking-wide outline-none;
   }
+
+  [id] {
+  scroll-margin-top: 50px; 
+  }
 }

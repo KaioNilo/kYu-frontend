@@ -63,7 +63,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <section 
+    <section id='portfolio' 
       className="w-full bg-[#2322E3] py-8 lg:py-14 relative overflow-hidden bg-cover bg-top bg-no-repeat"
       style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1774024084/BG_Portf%C3%B3lio_lxrqgl.png')" }}
     >

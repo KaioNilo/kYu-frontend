@@ -39,7 +39,7 @@ const services = [
   };
 
   return (
-    <section 
+    <section id='services' 
       className="w-full bg-[#2322E3] py-8 lg:py-14 relative overflow-hidden bg-cover bg-top bg-no-repeat"
       style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1774024173/BG_Servi%C3%A7os_gsilhr.png')" }}
     >
