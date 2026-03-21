@@ -29,8 +29,6 @@ function App() {
 
         <Portfolio/>
 
-        <Video/>
-
       </main>
 
       <Footer />

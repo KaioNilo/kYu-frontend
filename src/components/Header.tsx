@@ -19,7 +19,7 @@ export const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const navItems = ['ABOUT', 'PORTFOLIO', 'SERVICES', 'ORCAMENTO'];
+  const navItems = ['SOBRE', 'PORTFOLIO', 'SERVIÇOS', 'ORÇAMENTO'];
 
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ export const Header = () => {
         {navItems.map((item) => (
           <a
             key={item}
-            href={`#${item.toLowerCase().replace(' ', '-')}`} // Gera #sobre-mim, #portfólio, etc.
+            href={`#${item.toLowerCase().replace(' ', '-')}`}
             className="text-[#2322E3] font-bold hover:text-[#9A67FF] active:text-[#1CB940] hover:scale-105 transition-all duration-300 tracking-widest"
           >
             {item}

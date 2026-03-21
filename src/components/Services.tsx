@@ -39,21 +39,16 @@ const services = [
   };
 
   return (
-    <section id='services' 
+    <section id='serviços' 
       className="w-full bg-[#2322E3] py-8 lg:py-14 relative overflow-hidden bg-cover bg-top bg-no-repeat"
       style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1774024173/BG_Servi%C3%A7os_gsilhr.png')" }}
     >
       <div className="container mx-auto px-5 lg:px-20 relative z-10 flex flex-col items-center">
         
         {/* Cabeçalho */}
-        <div className="w-full flex justify-between items-end mb-5 max-w-[1200px]">
+        <div className="w-full flex justify-center mb-10 max-w-[1200px]">
 
           <h2 className="text-[#F2F9FF] text-4xl lg:text-6xl uppercase">SERVIÇOS</h2>
-
-          <button className="text-[#F2F9FF] text-[15px] tracking-[0.1em] 
-           uppercase hover:text-[#1dea4c] transition-all active:text-[#202020] mb-3 lg:text-[17px] lg:mb-3">
-            VER TUDO
-          </button>
 
         </div>
 

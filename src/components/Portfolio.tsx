@@ -69,16 +69,10 @@ export const Portfolio = () => {
     >
       <div className="container mx-auto px-5 lg:px-20 relative z-10 flex flex-col items-center">
         
-        <div className="w-full flex justify-between items-end mb-5 max-w-[1200px]">
+        <div className="w-full flex justify-center mb-10 max-w-[1200px]">
+
           <h2 className="text-[#F2F9FF] text-4xl lg:text-6xl uppercase">PORTFÓLIO</h2>
-          <a 
-            href="https://www.behance.net/KaioNiloFreitas" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[#F2F9FF] text-[15px] tracking-[0.1em] uppercase hover:text-[#1dea4c] transition-all active:text-[#202020] mb-3 lg:text-[17px]"
-          >
-            VER TUDO
-          </a>
+
         </div>
 
         <div className="relative w-full max-w-[1200px]">

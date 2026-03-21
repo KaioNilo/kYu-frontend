@@ -41,7 +41,7 @@ export const Hero = () => {
           </p>
 
           <a 
-          href="#orcamento"
+          href="#orçamento"
           className="border-2 mt-2 border-[#1DEA4C] text-[#1DEA4C] px-10 py-3 rounded-xl font-black uppercase tracking-[0.2em] hover:bg-[#1DEA4C] hover:text-[#202020] transition-all duration-300 inline-block text-center md:text-2xl"
           >
           Solicitar Serviço
