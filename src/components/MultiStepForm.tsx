@@ -56,7 +56,7 @@ export const MultiStepForm = () => {
   if (isSuccess) {
     return (
       <div 
-        className="bg-[#1DEA4C] border-7 h-105 p-5 rounded-[20px] text-center text-[#202020] flex flex-col items-center justify-center gap-5 mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat lg:p-15" 
+        className="bg-[#1DEA4C] border-7 h-105 p-5 rounded-[20px] text-center text-[#202020] flex flex-col items-center justify-center  mx-auto shadow-2xl animate-in zoom-in bg-cover bg-top bg-no-repeat lg:p-15 lg:justify-end" 
         style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1773153039/BGpopup_kprljq.png')"}}
       >
         <h2 className="text-3xl font-black uppercase tracking-wider">Pedido Realizado!</h2>
@@ -121,20 +121,19 @@ export const MultiStepForm = () => {
                 <option value="">ESCOLHA O(S) SERVIÇO(S)</option>
                 <option value="Landing Page|4000">Landing Page</option>
                 <option value="Identidade Visual|1000">Identidade Visual</option>
-                <option value="Logomarca|500">Landing Page</option>
-                <option value="Ilustração|400">Site Custom</option>
-                <option value="Edição de Imagem|50">Identidade Visual</option>
-                <option value="Post estático|100">Landing Page</option>
-                <option value="Post estático + Story  |150">Site Custom</option>
+                <option value="Logomarca|500">Logomarca</option>
+                <option value="Ilustração|400">Ilustração</option>
+                <option value="Edição de Imagem|50">Edição de Imagem</option>
+                <option value="Post estático|100">Post estático</option>
+                <option value="Post estático + Story  |150">Post estático + Story</option>
                 <option value="Post carrossel|400">1 Post carrossel</option>
-                <option value="Post carrossel + Stories|600">1 Post carrossel + Stories</option>
-                <option value="Reels|300">1 Reels</option>
+                <option value="Post carrossel + Stories|600">Post carrossel + Stories</option>
+                <option value="Reels|300">Reels</option>
                 <option value="Assinatura de Email|50">Assinatura de Email</option>
                 <option value="Cartão de Visita|50">Cartão de Visita</option>
                 <option value="Papel Timbrado|50">Papel Timbrado</option>
-                <option value="Panfleto [A5/A6]|150">Panfleto [A5/A6]</option>
-                <option value="Panfleto [A4]|150">Panfleto [A4]</option>
-                <option value="Folder [A4]|200">Folder [A4]</option>
+                <option value="Panfleto|150">Panfleto</option>
+                <option value="Folder |200">Folder</option>
                 <option value="Banner|100">Banner</option>
                 <option value="Bandeira|100">Bandeira</option>
                 <option value="Blusa|150">Blusa</option>
