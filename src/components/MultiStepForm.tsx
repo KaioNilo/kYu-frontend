@@ -126,7 +126,7 @@ export const MultiStepForm = () => {
                 <option value="Edição de Imagem|50">Edição de Imagem</option>
                 <option value="Post estático|100">Post estático</option>
                 <option value="Post estático + Story  |150">Post estático + Story</option>
-                <option value="Post carrossel|400">1 Post carrossel</option>
+                <option value="Post carrossel|400">Post carrossel</option>
                 <option value="Post carrossel + Stories|600">Post carrossel + Stories</option>
                 <option value="Reels|300">Reels</option>
                 <option value="Assinatura de Email|50">Assinatura de Email</option>
