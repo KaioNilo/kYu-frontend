@@ -119,9 +119,31 @@ export const MultiStepForm = () => {
                 className="bg-[#F2F9FF] p-5 rounded-2xl text-[#9A67FF] font-black outline-none cursor-pointer w-full appearance-none pr-12 lg:text-[14px]"
               >
                 <option value="">ESCOLHA O(S) SERVIÇO(S)</option>
-                <option value="Landing Page|500">Landing Page</option>
-                <option value="Site Custom|900">Site Custom</option>
-                <option value="Identidade Visual|300">Identidade Visual</option>
+                <option value="Landing Page|4000">Landing Page</option>
+                <option value="Identidade Visual|1000">Identidade Visual</option>
+                <option value="Logomarca|500">Landing Page</option>
+                <option value="Ilustração|400">Site Custom</option>
+                <option value="Edição de Imagem|50">Identidade Visual</option>
+                <option value="Post estático|100">Landing Page</option>
+                <option value="Post estático + Story  |150">Site Custom</option>
+                <option value="Post carrossel|400">1 Post carrossel</option>
+                <option value="Post carrossel + Stories|600">1 Post carrossel + Stories</option>
+                <option value="Reels|300">1 Reels</option>
+                <option value="Assinatura de Email|50">Assinatura de Email</option>
+                <option value="Cartão de Visita|50">Cartão de Visita</option>
+                <option value="Papel Timbrado|50">Papel Timbrado</option>
+                <option value="Panfleto [A5/A6]|150">Panfleto [A5/A6]</option>
+                <option value="Panfleto [A4]|150">Panfleto [A4]</option>
+                <option value="Folder [A4]|200">Folder [A4]</option>
+                <option value="Banner|100">Banner</option>
+                <option value="Bandeira|100">Bandeira</option>
+                <option value="Blusa|150">Blusa</option>
+                <option value="Botton|50">Botton</option>
+                <option value="Cartaz|100">Cartaz</option>
+                <option value="Backdrop|80">Backdrop</option>
+                <option value="Windbanner|50">Windbanner</option>
+                <option value="Diagramação [Por Página]|50">Diagramação [Por Página]</option>
+                <option value="Apresentação Profissional [Por Slide]|30">Apresentação Profissional [Por Slide]</option>
               </select>
               <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#9A67FF]">
                 <ChevronDown size={24} strokeWidth={3} /> 
