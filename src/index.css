@@ -43,4 +43,27 @@
   [id] {
   scroll-margin-top: 50px; 
   }
+
+
+  .custom-scrollbar {
+    overflow-y: auto;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #252525;
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1DEA4C; 
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9A67FF; 
+  }
 }
