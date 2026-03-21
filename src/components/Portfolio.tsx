@@ -1,19 +1,18 @@
 import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export const Services = () => {
+export const Portfolio = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
 const services = [
-    { title: "Site & Landing Page", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773963827/Servi%C3%A7o_1_v6jpf9.png" },
-    { title: "Identidade Visual", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774026579/Servi%C3%A7o_2_entpqr.png" },
-    { title: "Logomarca", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774028793/Servi%C3%A7o_3_q8iphj.png" },
-    { title: "Ilustração", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774029715/Servi%C3%A7o_4_bpwbvp.png" },
-    { title: "Posts Estáticos", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774035334/Servi%C3%A7o_5_hiwp3p.png" },
-    { title: "Material Impresso", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774038751/Servi%C3%A7o_7_zqhdbg.png" },
-    { title: "Diagramação", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774038751/Servi%C3%A7o_7_zqhdbg.png" },
-    { title: "Apresentações", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1774099768/63927702_95663771_sl5cjp.png" },
+    { title: "Landing Page Turbulentus", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773963827/Servi%C3%A7o_1_v6jpf9.png" },
+    { title: "Landing Page Camiseteria", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_3.png" },
+    { title: "Designer", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_4.png" },
+    { title: "Ilustração", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_1.png" },
+    { title: "Posts Estáticos", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_2.png" },
+    { title: "Reels", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_4.png" },
+    { title: "Material Impresso", mockup: "https://res.cloudinary.com/dbgkgdeex/image/upload/v1773758581/mockup_service_1.png" },
   ];
 
   // Sincroniza a paginação com o scroll manual
@@ -41,14 +40,14 @@ const services = [
   return (
     <section 
       className="w-full bg-[#2322E3] py-8 lg:py-14 relative overflow-hidden bg-cover bg-top bg-no-repeat"
-      style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1774024173/BG_Servi%C3%A7os_gsilhr.png')" }}
+      style={{ backgroundImage: "url('https://res.cloudinary.com/dbgkgdeex/image/upload/v1774024084/BG_Portf%C3%B3lio_lxrqgl.png')" }}
     >
       <div className="container mx-auto px-5 lg:px-20 relative z-10 flex flex-col items-center">
         
         {/* Cabeçalho */}
         <div className="w-full flex justify-between items-end mb-5 max-w-[1200px]">
 
-          <h2 className="text-[#F2F9FF] text-4xl lg:text-6xl uppercase">SERVIÇOS</h2>
+          <h2 className="text-[#F2F9FF] text-4xl lg:text-6xl uppercase">PORTFÓLIO</h2>
 
           <button className="text-[#F2F9FF] text-[15px] tracking-[0.1em] 
            uppercase hover:text-[#1dea4c] transition-all active:text-[#202020] mb-3 lg:text-[17px] lg:mb-3">
@@ -78,8 +77,8 @@ const services = [
                 key={index} 
                 className="
                   min-w-full 
-                  lg:min-w-[calc(50%-40px)] 
-                  snap-start bg-[#202020] h-70 p-6 rounded-[15px] flex flex-col gap-4
+                  lg:min-w-[calc(50%-20px)] 
+                  snap-start bg-[#202020] h-70 p-6 rounded-[15px] flex flex-col gap-5
                   transition-all duration-300 group cursor-grab active:cursor-grabbing lg:h-90
                 "
               >

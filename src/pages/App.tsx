@@ -5,6 +5,7 @@ import { Value } from '../components/Value';
 import { Form } from '../components/Form';
 import { Services } from '../components/Services';
 import { About } from '../components/About'
+import { Portfolio } from '../components/Portfolio'
 import { Footer } from '../components/Footer';
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
 
         <About/>
 
-        <Hero/>
+        <Portfolio/>
+
+        <Video/>
 
       </main>
 

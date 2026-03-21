@@ -2,7 +2,7 @@ import React from 'react';
 // Substituição da Lucide pela Phosphor Icons
 import { 
   EnvelopeSimple, 
-  WhatsappLogoIcon, 
+  WhatsappLogo, 
   LinkedinLogo, 
   GithubLogo 
 } from '@phosphor-icons/react'; 
@@ -53,19 +53,28 @@ export const About = () => {
               
               {/* ÍCONES SOCIAIS */}
               <div className="flex gap-6 my-3 items-center">
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+                {/* E-mail */}
+                <a href="mailto:kaionilofreitas@gmail.com" className="hover:text-[#1DEA4C] transition-colors" title="E-mail">
                   <EnvelopeSimple size={32} />
                 </a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
-                  <WhatsappLogoIcon size={32} />
+
+                {/* WhatsApp */}
+                <a href="https://wa.me/5588992431192" target="_blank" rel="noopener noreferrer" className="hover:text-[#1DEA4C] transition-colors" title="WhatsApp">
+                  <WhatsappLogo size={32} />
                 </a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+
+                {/* LinkedIn */}
+                <a href="https://linkedin.com/in/kaionilofreitas" target="_blank" rel="noopener noreferrer" className="hover:text-[#1DEA4C] transition-colors" title="LinkedIn">
                   <LinkedinLogo size={32} />
                 </a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors">
+
+                {/* GitHub */}
+                <a href="https://github.com/KaioNilo" target="_blank" rel="noopener noreferrer" className="hover:text-[#1DEA4C] transition-colors" title="GitHub">
                   <GithubLogo size={32} />
                 </a>
-                <a href="#" className="hover:text-[#1DEA4C] transition-colors text-[28px] font-bold">
+
+                {/* Behance */}
+                <a href="https://behance.net/KaioNiloFreitas" target="_blank" rel="noopener noreferrer" className="hover:text-[#1DEA4C] transition-colors text-[28px] font-bold" title="Behance">
                   Bē
                 </a>
               </div>
