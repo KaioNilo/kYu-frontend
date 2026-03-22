@@ -1,5 +1,4 @@
 import { Header } from '../components/Header';
-import { Video } from '../components/Video';
 import { Hero } from '../components/Hero';
 import { Value } from '../components/Value';
 import { Form } from '../components/Form';
@@ -14,8 +13,6 @@ function App() {
       <Header />
       
       <main>
-
-        <Video/>
 
         <Hero />
         
