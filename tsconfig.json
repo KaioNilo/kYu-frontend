@@ -7,7 +7,6 @@
     "skipLibCheck": true,
     "types": ["vite/client"],
 
-    /* Modo Bundler (Vite) */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
@@ -15,7 +14,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Ignorar erros de variáveis não usadas */
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -25,5 +23,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "src/vite-env.d.ts"]
+  "include": ["src"]
 }
