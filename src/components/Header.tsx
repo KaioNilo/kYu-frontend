@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Mail, MessageCircle } from 'lucide-react'; 
-import logoKyu from '@/assets/logo.svg';
+import logoKyu from '../assets/logo.svg';
 
 
 export const Header = () => {

@@ -1,4 +1,4 @@
-import logoKyu from '@/assets/logo.svg';
+import logoKyu from '../assets/logo.svg';
 
 export const Footer = () => {
   return (
