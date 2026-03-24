@@ -1,4 +1,5 @@
-import logoKyu from '../assets/logo.svg';
+import logoKyu from '@/assets/logo.svg';
+
 export const Footer = () => {
   return (
     <footer className="w-full bg-[#F2F9FF] py-3 flex justify-center items-center border-t border-gray-200">
